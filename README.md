@@ -1,19 +1,18 @@
 # 🤖 GenAI Learning Projects
 
-This repository contains my GenAI learning journey and projects built while exploring:
+This repository contains my GenAI learning journey and hands-on projects built while exploring:
 
 * Large Language Models (LLMs)
 * LangChain
+* Retrieval-Augmented Generation (RAG)
+* Vector Databases
+* HuggingFace Embeddings
 * Google Gemini API
+* Mistral AI
 * Streamlit
-* Embeddings
 * AI Chatbots
 * Information Extraction Systems
-
-Currently, this repository includes:
-
-1. Basic AI Chatbot
-2. Movie Information Extractor
+* Semantic Search Systems
 
 ---
 
@@ -21,12 +20,12 @@ Currently, this repository includes:
 
 ## 1. Basic AI Chatbot
 
-A simple chatbot built using LangChain and Gemini API.
+A simple conversational AI chatbot built using LangChain and Gemini API.
 
 ### Features
 
 * Conversational AI
-* Gemini integration
+* Gemini API integration
 * Prompt handling
 * Basic chat interaction
 
@@ -34,11 +33,11 @@ A simple chatbot built using LangChain and Gemini API.
 
 ## 2. Movie Information Extractor
 
-An AI-powered information extraction app that extracts structured movie details from paragraphs.
+An AI-powered information extraction application that extracts structured movie details from plain text paragraphs.
 
 ### Features
 
-* Extracts movie information from plain text
+* Extracts movie information from unstructured text
 * Identifies:
 
   * Movie Title
@@ -50,9 +49,57 @@ An AI-powered information extraction app that extracts structured movie details 
   * Main Theme
   * Ratings
   * Notable Features
-* Generates a short summary
+* Generates concise summaries
 * Streamlit UI
-* Uses Gemini 2.5 Flash model
+* Powered by Gemini 2.5 Flash
+
+---
+
+## 3. 📚 AI PDF Research Assistant (RAG Application)
+
+A professional Retrieval-Augmented Generation (RAG) application that allows users to upload PDFs and ask intelligent questions from the uploaded documents.
+
+### Features
+
+* Upload any PDF document
+* Semantic document search
+* AI-powered question answering
+* ChromaDB vector database integration
+* HuggingFace embeddings
+* Mistral LLM integration
+* Retrieval-Augmented Generation pipeline
+* Modern Streamlit UI
+* Context-aware responses
+* Dynamic document embeddings
+
+### Tech Highlights
+
+* LangChain
+* ChromaDB
+* HuggingFace Sentence Transformers
+* Mistral AI
+* Recursive Text Chunking
+* Semantic Retrieval
+* Vector Embeddings
+* Streamlit Frontend
+
+### RAG Workflow
+
+```text
+PDF Upload
+   ↓
+Text Extraction
+   ↓
+Chunking
+   ↓
+Embeddings Generation
+   ↓
+Vector Database Storage
+   ↓
+Semantic Retrieval
+   ↓
+LLM Response Generation
+```
 
 ---
 
@@ -61,14 +108,17 @@ An AI-powered information extraction app that extracts structured movie details 
 * Python
 * Streamlit
 * LangChain
+* ChromaDB
+* HuggingFace Embeddings
 * Google Gemini API
+* Mistral AI
 * python-dotenv
 
 ---
 
 # 📂 Project Structure
 
-```bash
+```text
 GENAI/
 │
 ├── chatbot/
@@ -77,6 +127,13 @@ GENAI/
 ├── project2/
 │   ├── core.py
 │   ├── corewithui.py
+│
+├── RAGProject/
+│   ├── app.py
+│   ├── create_db.py
+│   ├── streamlit_app.py
+│   ├── retrievers/
+│   ├── document loaders/
 │
 ├── .gitignore
 ├── README.md
@@ -95,11 +152,15 @@ GENAI/
 git clone https://github.com/your-username/your-repo-name.git
 ```
 
+---
+
 ## 2. Move Into Project Folder
 
 ```bash
 cd your-repo-name
 ```
+
+---
 
 ## 3. Create Virtual Environment
 
@@ -109,10 +170,10 @@ cd your-repo-name
 python -m venv .venv
 ```
 
-Activate:
+Activate virtual environment:
 
 ```bash
-.venv\Scripts\activate
+.venv\\Scripts\\activate
 ```
 
 ---
@@ -130,15 +191,26 @@ pip install -r requirements.txt
 Create a `.env` file in the root directory.
 
 ```env
-GOOGLE_API_KEY=your_api_key_here
+GOOGLE_API_KEY=your_google_api_key
+MISTRAL_API_KEY=your_mistral_api_key
 ```
 
 ---
 
-# ▶️ Run Streamlit App
+# ▶️ Run Streamlit Applications
+
+## Movie Information Extractor
 
 ```bash
 streamlit run project2/corewithui.py
+```
+
+---
+
+## AI PDF Research Assistant
+
+```bash
+streamlit run RAGProject/streamlit_app.py
 ```
 
 ---
@@ -166,13 +238,17 @@ Main Cast: Matthew McConaughey, Anne Hathaway
 # 📌 Learning Goals & Future Improvements
 
 * Build advanced RAG applications
-* Add vector databases
+* Add hybrid search systems
 * Improve prompt engineering
-* Create multi-agent systems
-* Add PDF and document understanding
-* Improve Streamlit UI design
+* Create multi-agent AI systems
+* Add conversational memory
+* Add multi-document RAG support
 * Explore open-source LLMs
+* Improve Streamlit UI/UX
 * Deploy GenAI applications
+* Add authentication systems
+* Implement source citations
+* Build production-ready AI assistants
 
 ---
 
@@ -182,6 +258,6 @@ Anshu Varma
 
 ---
 
-# ⭐ If you liked this project
+# ⭐ If You Like This Project
 
 Give it a star on GitHub ⭐
